@@ -102,12 +102,10 @@ function carritoHTML() {
     // agrega el html del carrito en el tbody
     contenedorCarrito.appendChild(row);
   });
-
-  function sincronizarStorage() {
-    localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
-  }
 }
-
+function sincronizarStorage() {
+  localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
+}
 //Elimina los cursos del Tbody
 function limpiarHTML() {
   // //forma lenta
@@ -115,6 +113,6 @@ function limpiarHTML() {
   while (contenedorCarrito.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
-    // agregar el carrito de compras al storage
+  //  agregar el carrito de compras al storage
   sincronizarStorage();
 }
