@@ -103,8 +103,6 @@ function carritoHTML() {
     contenedorCarrito.appendChild(row);
   });
 
-  // agregar el carrito de compras al storage
-  sincronizarStorage();
   function sincronizarStorage() {
     localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
   }
@@ -117,4 +115,6 @@ function limpiarHTML() {
   while (contenedorCarrito.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
+    // agregar el carrito de compras al storage
+  sincronizarStorage();
 }
